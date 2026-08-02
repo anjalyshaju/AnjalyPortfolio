@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============ SEO META ============ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wilson Kinyua — Software Engineer | Portfolio</title>
+  <meta name="description" content="Wilson Kinyua is a Nairobi-based Software Engineer with 5+ years of experience in web development, mobile apps, UI/UX design and payment integrations." />
+  <meta name="keywords" content="Wilson Kinyua, Software Engineer, Web Developer, Nairobi, Kenya, Fullstack Developer, UI/UX" />
+  <meta name="author" content="Wilson Kinyua" />
+  <meta property="og:title" content="Wilson Kinyua — Software Engineer" />
+  <meta property="og:description" content="Driven, innovative Software Engineer. Web, Mobile, UI/UX & Payment Integrations." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://wilsonkinyua.com/" />
+
+  <!-- ============ FONTS & ICONS ============ -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/Style.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+<link rel="manifest" href="Images/site.webmanifest">
+
+</head>
+<body>
+
+  <!-- ================= PRELOADER ================= -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-logo">Anjaly <span>Shaju</span></div>
+    <div class="loader-bar"><i id="loaderFill"></i></div>
+  </div>
+
+  <!-- ================= CUSTOM CURSOR ================= -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header id="siteHeader">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="#home">Anjaly <span>Shaju</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:14px">
+        <a href="#contact" class="btn btn-sm hoverable">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+  <!-- ================= HERO ================= -->
+  <section id="home">
+    <div class="container hero-grid">
+      <div class="hero" data-aos="fade-right">
+        <p class="eyebrow">Hello, my name is</p>
+        <h1><span class="accent">Anjaly</span> Shaju</h1>
+        <div class="typing-wrap">
+          <span id="typed"></span><span class="type-caret"></span>
+        </div>
+        <p class="lead">
+         Passionate UI Designer focused on creating responsive,user-friendly websites and web applications with a focus on clean, modern interfaces using Figma, HTML, CSS, JavaScript, jQuery, and Bootstrap.
+        </p>
+        <div class="hero-cta">
+          <a href="Anjalyresume.pdf" class="btn hoverable" target="_blank"><i class="fa-solid fa-download"></i> Download Resume</a>
+          <a href="#contact" class="btn ghost hoverable">Contact Me</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.behance.net/anjalyshaju" target="_blank" class="hoverable" aria-label="behance"><i class="fa-brands fa-behance"></i></a>
+          <a href="https://www.linkedin.com/in/anjaly-shaju-96283a220/" target="_blank" class="hoverable" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:anjalyshaju01@gmail.com" class="hoverable"target="_blank"  aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <!-- <a href="#" class="hoverable" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a> -->
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="zoom-in" data-aos-delay="150">
+        <div class="portrait-ring">
+          <div class="portrait">
+            <!-- 🔁 Replace this SVG with: <img src="images/wilson-hero.png" alt="Wilson Kinyua"> -->
+         <img src="Images/anjalyshaju.png">
+          </div>
+          <!-- draggable chips -->
+         <div class="float-chip chip-1 hoverable">
+    <i class="fa-brands fa-bootstrap"></i> Bootstrap
+</div>
+
+<div class="float-chip chip-2 hoverable">
+    <i class="fa-solid fa-code"></i> jQuery
+</div>
+          <div class="float-chip chip-3 hoverable"><i class="fa-brands fa-figma"></i> UI/UX</div>
+          <span class="drag-hint">✦ drag the cards around ✦</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-photo" data-aos="fade-up">
+        <!-- 🔁 Replace with: <img src="images/wilson-about.jpg" alt="Wilson Kinyua thinking"> -->
+        <!-- <svg viewBox="0 0 200 210" role="img" aria-label="Portrait placeholder">
+          <circle cx="100" cy="78" r="42" fill="#34343a"/>
+          <path d="M22 210c8-56 38-80 78-80s70 24 78 80z" fill="#34343a"/>
+        </svg> -->
+        <img src="Images/Anjalynew.png">
+      </div>
+      <div class="about-copy" data-aos="fade-up" data-aos-delay="120">
+        <p class="kicker">About Me</p>
+        <h2><span class="accent">Passionate,</span> Creative<br>UI/UX <span class="accent">Designer</span></h2>
+        <p>
+         I am a passionate UI/UX Designer with 4+ years of experience creating responsive, user-friendly websites 
+         and web applications. I enjoy transforming ideas into clean, modern, and intuitive interfaces using Figma,
+          HTML, CSS, JavaScript, jQuery, and Bootstrap while continuously exploring new technologies and design trends.
+        </p>
+        <ul class="check-list">
+          <li><i class="fa-regular fa-circle-check"></i> Created wireframes, and high-fidelity prototypes following
+Human-Centered Design.</li>
+          <li><i class="fa-regular fa-circle-check"></i> Design dashboards, layouts, forms, and tables for the HRMS product software.</li>
+          <li><i class="fa-regular fa-circle-check"></i> Converted designs into pixel-perfect UI using HTML5, CSS3, JavaScript, and
+Bootstrap 5.</li>
+          <li><i class="fa-regular fa-circle-check"></i> Ensured cross-browser compatibility and performance optimization.</li>
+        </ul>
+        <div class="counters">
+          <div class="counter-card hoverable">
+            <div class="num"><span class="count" data-target="4">0</span>+</div>
+            <div class="lbl">Years Experience</div>
+          </div>
+          <div class="counter-card hoverable">
+            <div class="num"><span class="count" data-target="40">0</span>+</div>
+            <div class="lbl">Projects Done</div>
+          </div>
+          <div class="counter-card hoverable">
+            <div class="num"><span class="count" data-target="40">0</span>+</div>
+            <div class="lbl">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services">
+  <div class="container">
+    <div class="sec-head" data-aos="fade-up">
+      <p class="kicker">What I Do Best</p>
+      <h2>My <span class="accent">Professional Services</span><br>for Modern <span class="accent">Digital Experiences</span></h2>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card hoverable" data-aos="fade-up">
+        <div class="icon">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Designing intuitive, user-friendly, and visually engaging interfaces that enhance user experience across web applications.</p>
+      </article>
+
+      <article class="service-card hoverable" data-aos="fade-up" data-aos-delay="80">
+        <div class="icon">
+          <i class="fa-brands fa-figma"></i>
+        </div>
+        <h3>Figma Design</h3>
+        <p>Creating wireframes, high-fidelity mockups, interactive prototypes, and scalable design systems in Figma.</p>
+      </article>
+
+      <article class="service-card hoverable" data-aos="fade-up" data-aos-delay="160">
+        <div class="icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3>Front-End Development</h3>
+        <p>Converting UI designs into responsive, pixel-perfect websites using HTML, CSS, JavaScript, jQuery, and Bootstrap.</p>
+      </article>
+
+      <article class="service-card hoverable" data-aos="fade-up">
+        <div class="icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <h3>Responsive Web Design</h3>
+        <p>Building websites that deliver a seamless experience across desktops, tablets, and mobile devices.</p>
+      </article>
+
+      <article class="service-card hoverable" data-aos="fade-up" data-aos-delay="80">
+        <div class="icon">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <h3>Dashboard & Web App Design</h3>
+        <p>Designing modern dashboards, admin panels, HRMS, ESSP, ERP, DMS and CRM interfaces with a focus on usability and efficiency.</p>
+      </article>
+
+     <article class="service-card hoverable" data-aos="fade-up" data-aos-delay="160">
+    <div class="icon">
+        <i class="fa-solid fa-bezier-curve"></i>
+    </div>
+    <h3>Wireframing & Prototyping</h3>
+    <p>Creating interactive wireframes and prototypes to visualize user journeys and validate design concepts before development.</p>
+</article>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ================= RESUME ================= -->
+  <section id="resume">
+    <div class="container">
+      <div class="sec-head" data-aos="fade-up">
+        <p class="kicker">My <span class="accent">Resume</span></p>
+        <h2>Real <span class="accent">Problem Solutions</span><br>Experience</h2>
+      </div>
+      <div class="resume-grid">
+        <!-- Education -->
+        <div class="resume-col" data-aos="fade-right">
+          <h3>Education</h3>
+          <div class="timeline">
+            <div class="t-item hoverable">
+              <h4>Bharathiar University </h4>
+              <div class="t-meta"><em>
+Master of Computer Applications(MCA)</em><span>2021 – 2023</span></div>
+              <p>My Master of Computer Applications provided in-depth knowledge of computer science, software engineering,
+                 and application development. 
+                The curriculum helped me build technical expertise while improving my ability to design and develop efficient software solutions.</p>
+            </div>
+            <div class="t-item hoverable">
+              <h4>Mar Elias College, Kottapady</h4>
+              
+              <div class="t-meta"><em>Bachelor of Computer Applications(2016-2019)</em><span>&nbsp;</span></div>
+              <p>Built a solid foundation in programming through hands-on learning.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Experience -->
+        <div class="resume-col" data-aos="fade-left" data-aos-delay="100">
+          <h3>Experience</h3>
+          <div class="timeline" id="expAccordion">
+            <div class="t-item acc open hoverable">
+              <button class="acc-head hoverable" aria-expanded="true">
+                <h4>Ihits Technologies Private Limited</h4><i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="acc-body" style="display:block">
+                <div class="t-meta"><em>UI Designer</em><span>Dec 2021 – PRESENT</span></div>
+                <ul>
+                  <li>
+Create visually engaging and user-friendly mobile app designs with creative UI
+elements.
+                  </li>
+                  <li>
+Oversee design system creation using Figma (Auto Layout, Components,
+Design Tokens).
+                  </li>
+                  <li>
+Design dashboards, layouts, forms, and tables for the HRMS product software.
+
+                  </li>
+                  <li>
+Contribute to creating intuitive, visually consistent, and high-performing user
+experiences across platforms.
+                  </li>
+                  <li>
+Created wireframes, user flows, and high-fidelity prototypes following
+Human-Centered Design.
+                  </li>
+                  <li>
+Converted designs into pixel-perfect UI using HTML5, CSS3, JavaScript, and
+Bootstrap 5.
+                  </li>
+                  <li>
+Designed responsive dashboards and enterprise web applications using Figma.
+                  </li>
+                  <li>
+Ensured cross-browser compatibility and performance optimization.
+                  </li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+            <!-- 🔁 Edit the roles/dates/descriptions below to match the real CV -->
+            <div class="t-item acc hoverable">
+              <button class="acc-head hoverable" aria-expanded="false">
+                <h4>WebApps Technologies Private Limited</h4><i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="acc-body">
+                <div class="t-meta"><em>UI Designer(Internship, May2021 - Nov2021)</em><span>&nbsp;</span></div>
+                <p>Assisted in designing responsive and user-friendly web interfaces using Figma, HTML, CSS, JavaScript, and Bootstrap.</p>
+              </div>
+            </div>
+          
+           
+           
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-head" data-aos="fade-up">
+        <p class="kicker">My <span class="accent">Talent</span></p>
+        <h2>Professional Skills</h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill-card hoverable" data-aos="zoom-in" data-aos-delay="160"><div class="s-icon" style="color:#a259ff"><i class="fa-brands fa-figma"></i></div><span>Figma</span></div>
+        <div class="skill-card hoverable" data-aos="zoom-in" data-aos-delay="120">
+    <div class="s-icon txt" style="color:#FF61F6;">Xd</div>
+    <span>Adobe XD</span>
+</div>
+<div class="skill-card hoverable" data-aos="zoom-in" data-aos-delay="40">
+    <div class="s-icon txt" style="color:#31A8FF;">Ps</div>
+    <span>Adobe Photoshop</span>
+</div>
+                <div class="skill-card hoverable" data-aos="zoom-in" data-aos-delay="120"><div class="s-icon txt" style="color:#0769ad">jQ</div><span>jQuery</span></div>
+
+        <div class="skill-card hoverable" data-aos="zoom-in"><div class="s-icon" style="color:#f7df1e"><i class="fa-brands fa-js"></i></div><span>Javascript</span></div>
+<div class="skill-card hoverable" data-aos="zoom-in" data-aos-delay="40">
+    <i class="fa-brands fa-bootstrap s-icon" style="color:#7952B3;"></i>
+    <span>Bootstrap5</span>
+</div>
+        
+
+<div class="skill-card hoverable" data-aos="zoom-in" data-aos-delay="80">
+    <div class="s-icon" style="color:#E34F26">
+        <i class="fa-brands fa-html5"></i>
+    </div>
+    <span>HTML5</span>
+</div>    
+
+<div class="skill-card hoverable" data-aos="zoom-in" data-aos-delay="80">
+    <div class="s-icon" style="color:#1572B6;">
+        <i class="fa-brands fa-css3-alt"></i>
+    </div>
+    <span>CSS3</span>
+</div>
+
+<div class="skill-card hoverable" data-aos="zoom-in" data-aos-delay="160">
+    <div class="s-icon" style="color:#F05032;">
+        <i class="fa-brands fa-git-alt"></i>
+    </div>
+    <span>Git</span>
+</div>     
+   <div class="skill-card hoverable" data-aos="zoom-in"><div class="s-icon" style="color:#61dafb"><i class="fa-brands fa-react"></i></div><span>React</span></div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-head" data-aos="fade-up">
+        <p class="kicker">Latest Works</p>
+        <h2>Explore My <span class="accent">Popular Projects</span></h2>
+      </div>
+
+      <article class="project" data-aos="fade-up">
+        <!-- 🔁 Replace .mock divs with <img src="images/project-1.jpg" alt="..."> -->
+        <div class="p-media hoverable"><div class="mock g1"><img src="Images/login.png" style="    height: 100%;"></div></div>
+        <div class="p-info">
+          <span class="tag">Web Application</span>
+          <h3>Human Resource Management System</h3>
+          <p>An HRMS solution that streamlines employee management and daily HR processes.</p>
+          <a href="iHITS-HRIS-Design-System.pdf"  target="_blank" class="p-link hoverable" aria-label="Open Mount Kenya Wildlife Conservancy project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
+
+      <article class="project" data-aos="fade-up">
+        <div class="p-media hoverable"><div class="mock g2"><img src="Images/asianet-login.png"></div></div>
+        <div class="p-info">
+          <span class="tag">Web Application</span>
+          <h3>Self-Service Portal</h3>
+          <p>A secure self-service portal that enables employees to manage attendance, leave, payroll, and personal information.</p>
+          <a href="ESSP-Behance-Case-Study.pdf" target="_blank" class="p-link hoverable" aria-label="Open 3ACCA project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
+
+      <article class="project" data-aos="fade-up">
+        <div class="p-media hoverable"><div class="mock g3">Paya</div></div>
+        <div class="p-info">
+          <span class="tag">Mobile Application </span>
+          <h3>Self-Service Portal</h3>
+          <p>A secure mobile self-service app for accessing HR services and employee information on the go.</p>
+          <a href="#" class="p-link hoverable" aria-label="Open Paya project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
+
+      <article class="project" data-aos="fade-up">
+        <div class="p-media hoverable"><div class="mock g4"><img src="Images/project.png"></div></div>
+        <div class="p-info">
+          <span class="tag">Web Application</span>
+          <h3>Customer Relationship Management</h3>
+          <p>A powerful CRM solution to organize customer data and automate sales workflows.
+Enhance collaboration, increase productivity, and deliver exceptional customer experiences.</p>
+          <a href="IHITS-CRM-Overview.pdf" target="_blank" class="p-link hoverable" aria-label="Open QNET project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
+
+      <!-- <article class="project" data-aos="fade-up">
+        <div class="p-media hoverable"><div class="mock g5">Newmark</div></div>
+        <div class="p-info">
+          <span class="tag">Web Application</span>
+          <h3>The Newmark Group Limited</h3>
+          <p>A leading African integrated marketing communications (IMC) firm that ranks among
+             the fastest growing, with a strong presence in the multinational brand segment of the market.</p>
+          <a href="#" class="p-link hoverable" aria-label="Open Newmark project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article> -->
+
+      <!-- <div class="projects-more" data-aos="fade-up">
+        <a href="#" class="btn hoverable">View More Projects <i class="fa-solid fa-arrow-right"></i></a>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <p class="kicker">Get In Touch</p>
+        <h2>Let's Talk For your<br><span class="accent">Next Projects</span></h2>
+        <p>Let's build something amazing together. Whether you have a project, an idea, or an opportunity, I'm always happy to connect.</p>
+        <ul class="check-list">
+          <li><i class="fa-regular fa-circle-check"></i> 4+ Years of Experience</li>
+          <li><i class="fa-regular fa-circle-check"></i> Creative UI/UX Designer</li>
+          <li><i class="fa-regular fa-circle-check"></i> Web Design & Dashboard Design</li>
+          <li><i class="fa-regular fa-circle-check"></i> Figma & Prototyping</li>
+          <li><i class="fa-regular fa-circle-check"></i> HTML, CSS, JavaScript & Bootstrap</li>
+        </ul>
+        <div class="socials" style="margin-top:24px">
+          <a href="https://www.behance.net/anjalyshaju" target="_blank" class="hoverable" aria-label="behance"><i class="fa-brands fa-behance"></i></a>
+          <a href="https://www.linkedin.com/in/anjaly-shaju-96283a220/" target="_blank" class="hoverable" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:anjalyshaju01@gmail.com" class="hoverable"target="_blank"  aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <form id="contactForm" data-aos="fade-left" data-aos-delay="100" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="fName">Full Name</label>
+            <input type="text" id="fName" name="fullName" placeholder="Anjaly Shaju" autocomplete="name">
+            <span class="err-msg"></span>
+          </div>
+          <div class="field">
+            <label for="fEmail">Email Address</label>
+            <input type="email" id="fEmail" name="email" placeholder="anjalyshaju01@gmail.com" autocomplete="email">
+            <span class="err-msg"></span>
+          </div>
+          <div class="field">
+            <label for="fPhone">Phone Number</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="9526819712" autocomplete="tel">
+            <span class="err-msg"></span>
+          </div>
+          <div class="field">
+            <label for="fSubject">Subject</label>
+            <input type="text" id="fSubject" name="subject" placeholder="Write your subject…">
+            <span class="err-msg"></span>
+          </div>
+          <div class="field full">
+            <label for="fMessage">Message</label>
+            <textarea id="fMessage" name="message" placeholder="Write your message…"></textarea>
+            <span class="err-msg"></span>
+          </div>
+        </div>
+        <button type="submit" class="btn hoverable" style="margin-top:22px">
+          Send Message <i class="fa-regular fa-paper-plane"></i>
+        </button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="foot">
+      <p>©2026, <span class="logo-sm">Anjaly shaju</span>. All Rights Reserved</p>
+      <ul class="foot-links">
+        <li><a href="#about" class="hoverable">About</a></li>
+        <li><a href="#services" class="hoverable">Services</a></li>
+        <li><a href="#resume" class="hoverable">Resume</a></li>
+        <li><a href="#skills" class="hoverable">Skills</a></li>
+        <li><a href="#projects" class="hoverable">Projects</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP ================= -->
+  <button id="toTop" class="hoverable" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/custom.js"></script>
+
+ 
+</body>
+</html>
