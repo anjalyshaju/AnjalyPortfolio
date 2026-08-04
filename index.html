@@ -4,14 +4,13 @@
   <!-- ============ SEO META ============ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wilson Kinyua — Software Engineer | Portfolio</title>
-  <meta name="description" content="Wilson Kinyua is a Nairobi-based Software Engineer with 5+ years of experience in web development, mobile apps, UI/UX design and payment integrations." />
-  <meta name="keywords" content="Wilson Kinyua, Software Engineer, Web Developer, Nairobi, Kenya, Fullstack Developer, UI/UX" />
-  <meta name="author" content="Wilson Kinyua" />
-  <meta property="og:title" content="Wilson Kinyua — Software Engineer" />
-  <meta property="og:description" content="Driven, innovative Software Engineer. Web, Mobile, UI/UX & Payment Integrations." />
-  <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://wilsonkinyua.com/" />
+  <title>Anjaly Shaju — UI/UX Designer | Portfolio</title>
+<meta name="description" content="Anjaly Shaju is a UI Designer & Front-End Developer based in Kochi, India, with 4+ years of experience in UI/UX design, responsive web applications, dashboards, and modern front-end development." />
+<meta name="keywords" content="Anjaly Shaju, UI Designer, UI UX Designer, Front-End Developer, HTML, CSS, JavaScript, Bootstrap, jQuery, Figma, Kochi, Kerala, Web Designer, Portfolio" />
+<meta name="author" content="Anjaly Shaju" />
+<meta property="og:title" content="Anjaly Shaju — UI Designer & Front-End Developer" />
+<meta property="og:description" content="Creative UI Designer with 4+ years of experience designing modern, responsive websites, dashboards, and web applications using Figma, HTML, CSS, JavaScript, Bootstrap, and jQuery." />
+<meta property="og:type" content="website" />
 
   <!-- ============ FONTS & ICONS ============ -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -23,6 +22,46 @@
 <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
 <link rel="manifest" href="Images/site.webmanifest">
+
+<!-- ============ PROJECT IMAGE ZOOM (LIGHTBOX) ============ -->
+<style>
+  .p-media{ cursor: zoom-in; }
+  #imgLightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(10,10,10,0.92);
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+  }
+  #imgLightbox.active{ display:flex; }
+  #imgLightbox img{
+    max-width:90vw;
+    max-height:90vh;
+    border-radius:8px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+    transform:scale(0.9);
+    opacity:0;
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  #imgLightbox.active img{
+    transform:scale(1);
+    opacity:1;
+  }
+  #imgLightbox .lb-close{
+    position:absolute;
+    top:24px;
+    right:32px;
+    color:#fff;
+    font-size:32px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    line-height:1;
+  }
+</style>
 
 </head>
 <body>
@@ -371,7 +410,7 @@ Ensured cross-browser compatibility and performance optimization.
 
       <article class="project" data-aos="fade-up">
         <!-- 🔁 Replace .mock divs with <img src="images/project-1.jpg" alt="..."> -->
-        <div class="p-media hoverable"><div class="mock g1"><img src="Images/login.png" style="    height: 100%;"></div></div>
+        <div class="p-media hoverable "  ><div class="mock g1"><img src="Images/login.png" style="    height: 100%;"></div></div>
         <div class="p-info">
           <span class="tag">Web Application</span>
           <h3>Human Resource Management System</h3>
@@ -504,6 +543,12 @@ Enhance collaboration, increase productivity, and deliver exceptional customer e
   <!-- ================= BACK TO TOP ================= -->
   <button id="toTop" class="hoverable" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
 
+  <!-- ================= IMAGE LIGHTBOX ================= -->
+  <div id="imgLightbox" aria-hidden="true">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <img src="" alt="Project preview">
+  </div>
+
   <!-- ================= SCRIPTS ================= -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -512,6 +557,53 @@ Enhance collaboration, increase productivity, and deliver exceptional customer e
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/custom.js"></script>
+
+  <!-- ============ PROJECT IMAGE ZOOM (LIGHTBOX) LOGIC ============ -->
+  <script>
+    (function () {
+      var lightbox = document.getElementById('imgLightbox');
+      var lightboxImg = lightbox.querySelector('img');
+      var closeBtn = lightbox.querySelector('.lb-close');
+
+      function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || 'Project preview';
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.p-media').forEach(function (media) {
+        var img = media.querySelector('img');
+        if (!img) return; // skip mocks without a real image (e.g. Paya, Newmark)
+
+        media.addEventListener('click', function (e) {
+          openLightbox(img.getAttribute('src'), img.getAttribute('alt'));
+        });
+      });
+
+      // Don't let the "open PDF" link also trigger the zoom
+      document.querySelectorAll('.p-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
 
  
 </body>
