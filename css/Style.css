@@ -398,13 +398,29 @@
     .hero-visual{order:-1;margin-bottom:10px}
     .project:nth-child(even) .p-media{order:0}
     .p-info p{max-width:100%}
-    .chip-2{left:0}.chip-3{right:0}
+    .chip-1{left:2%}.chip-2{left:0}.chip-3{right:0}
   }
   @media (max-width:560px){
     .skills-grid{grid-template-columns:repeat(2,1fr)}
     .services-grid,.form-grid{grid-template-columns:1fr}
     .counters{grid-template-columns:repeat(3,1fr)}
     .foot{justify-content:center;text-align:center}
+  }
+  @media (max-width:480px){
+    .container{width:min(1140px,94%)}
+    .portrait-ring{width:min(240px,72vw)}
+    .float-chip{padding:7px 12px;font-size:.7rem;gap:6px}
+    .chip-1{top:2%;left:0}
+    .chip-2{bottom:8%;left:-2%}
+    .chip-3{top:40%;right:-2%}
+    .drag-hint{display:none}
+    .hero h1{font-size:clamp(2rem,9vw,2.6rem)}
+    .counters{grid-template-columns:repeat(3,1fr);gap:8px}
+    .counter-card{padding:12px 6px}
+    .counter-card .num{font-size:1.35rem}
+    .hero-cta{gap:10px}
+    .btn{padding:10px 18px;font-size:.8rem}
+    #toTop{right:16px;bottom:16px;width:40px;height:40px}
   }
 
   /* =========================================================
