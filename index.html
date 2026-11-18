@@ -8971,7 +8971,20 @@
   body,a,button,input,select,textarea,.interactive{cursor:auto!important;}
   a,button,.interactive{cursor:pointer!important;}
 }
-</style></head>
+</style><style>
+/* Preserve the existing Explore badge appearance for PDF links */
+#portfolio a.ref-gallery-view { text-decoration: none; cursor: pointer; }
+#portfolio a.ref-gallery-view:focus-visible { outline: 2px solid #c2b19b; outline-offset: 4px; }
+</style>
+
+<style id="explore-click-fix">
+/* Make Explore links genuinely clickable on desktop and touch devices. */
+#portfolio .ref-gallery-visual { position: relative; }
+#portfolio .ref-gallery-view { pointer-events: auto !important; z-index: 50 !important; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; cursor: pointer; }
+#portfolio .ref-gallery-view:focus-visible { outline: 3px solid #c2b19b; outline-offset: 4px; opacity: 1; transform: none; }
+@media (hover: none) { #portfolio .ref-gallery-view { opacity: 1 !important; transform: none !important; } }
+</style>
+</head>
 <body class="antialiased selection:bg-brand-accent selection:text-black">
 <div aria-hidden="true" id="motion-progress"></div>
 <div aria-hidden="true" class="motion-spotlight"></div>
@@ -9093,7 +9106,7 @@
 <div class="ref-gallery-grid">
 <article class="ref-gallery-card">
 <div class="ref-gallery-visual ref-gallery-theme-0">
-<img alt="Dashboard project cover image" class="ref-gallery-full-image" loading="lazy" src="MacBook Pro 16_ - 11.png"/><span class="ref-gallery-no">01 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span>
+<img alt="Dashboard project cover image" class="ref-gallery-full-image" loading="lazy" src="MacBook Pro 16_ - 11.png"/><span class="ref-gallery-no">01 / 14</span><a class="ref-gallery-view" href="project-01-dashboard.html" target="_blank" rel="noopener noreferrer" aria-label="Open Dashboard project details">EXPLORE ↗</a>
 </div>
 <div class="ref-gallery-info">
 <div aria-hidden="true" class="ref-gallery-dots">
@@ -9104,7 +9117,7 @@
 </div>
 </article>
 <article class="ref-gallery-card">
-<div class="ref-gallery-visual ref-gallery-theme-1"><img alt="Corporate Website project cover image" class="ref-gallery-full-image" loading="lazy" src="asianet-login.png"/><span class="ref-gallery-no">02 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+<div class="ref-gallery-visual ref-gallery-theme-1"><img alt="Corporate Website project cover image" class="ref-gallery-full-image" loading="lazy" src="asianet-login.png"/><span class="ref-gallery-no">02 / 14</span><a class="ref-gallery-view" href="project-02-corporate.html" target="_blank" rel="noopener noreferrer" aria-label="Open Corporate Website project details">EXPLORE ↗</a></div>
 <div class="ref-gallery-info">
 <div aria-hidden="true" class="ref-gallery-dots">
 <span></span><span></span><span></span><span></span><span></span></div>
@@ -9114,7 +9127,7 @@
 </div>
 </article>
 <article class="ref-gallery-card">
-<div class="ref-gallery-visual ref-gallery-theme-2"><img alt="Futuristic Design project cover image" class="ref-gallery-full-image" loading="lazy" src="login.png"/><span class="ref-gallery-no">03 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+<div class="ref-gallery-visual ref-gallery-theme-2"><img alt="Futuristic Design project cover image" class="ref-gallery-full-image" loading="lazy" src="login.png"/><span class="ref-gallery-no">03 / 14</span><a class="ref-gallery-view" href="project-03-futuristic.html" target="_blank" rel="noopener noreferrer" aria-label="Open Futuristic Design project details">EXPLORE ↗</a></div>
 <div class="ref-gallery-info">
 <div aria-hidden="true" class="ref-gallery-dots">
 <span></span><span></span><span></span><span></span><span></span></div>
@@ -9124,7 +9137,7 @@
 </div>
 </article>
 <article class="ref-gallery-card">
-<div class="ref-gallery-visual ref-gallery-theme-3"><img alt="E-Commerce Website project cover image" class="ref-gallery-full-image" loading="lazy" src="project.png"/><span class="ref-gallery-no">04 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+<div class="ref-gallery-visual ref-gallery-theme-3"><img alt="E-Commerce Website project cover image" class="ref-gallery-full-image" loading="lazy" src="project.png"/><span class="ref-gallery-no">04 / 14</span><a class="ref-gallery-view" href="project-04-ecommerce.html" target="_blank" rel="noopener noreferrer" aria-label="Open E-Commerce Website project details">EXPLORE ↗</a></div>
 <div class="ref-gallery-info">
 <div aria-hidden="true" class="ref-gallery-dots">
 <span></span><span></span><span></span><span></span><span></span></div>
@@ -9134,7 +9147,7 @@
 </div>
 </article>
 <article class="ref-gallery-card">
-<div class="ref-gallery-visual ref-gallery-theme-4"><img alt="Educational Web App project cover image" class="ref-gallery-full-image" loading="lazy" src="project.png"/><span class="ref-gallery-no">05 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+<div class="ref-gallery-visual ref-gallery-theme-4"><img alt="Educational Web App project cover image" class="ref-gallery-full-image" loading="lazy" src="project.png"/><span class="ref-gallery-no">05 / 14</span><a class="ref-gallery-view" href="project-05.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 05 PDF">EXPLORE ↗</a></div>
 <div class="ref-gallery-info">
 <div aria-hidden="true" class="ref-gallery-dots">
 <span></span><span></span><span></span><span></span><span></span></div>
@@ -9147,7 +9160,7 @@
                     <div class="ref-gallery-visual ref-gallery-theme-5"><img alt="Product Website project cover image"
                             class="ref-gallery-full-image" loading="lazy"
                             src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">06 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">06 / 14</span><a class="ref-gallery-view" href="project-06.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 06 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
@@ -9160,7 +9173,7 @@
                     <div class="ref-gallery-visual ref-gallery-theme-6"><img alt="Bidding App project cover image"
                             class="ref-gallery-full-image" loading="lazy"
                             src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9d?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">07 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">07 / 14</span><a class="ref-gallery-view" href="project-07.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 07 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
@@ -9173,7 +9186,7 @@
                     <div class="ref-gallery-visual ref-gallery-theme-0"><img
                             alt="E-Commerce Website project cover image" class="ref-gallery-full-image" loading="lazy"
                             src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">08 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">08 / 14</span><a class="ref-gallery-view" href="project-08.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 08 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
@@ -9187,7 +9200,7 @@
                             alt="Pet &amp; Essentials Website project cover image" class="ref-gallery-full-image"
                             loading="lazy"
                             src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">09 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">09 / 14</span><a class="ref-gallery-view" href="project-09.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 09 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
@@ -9200,7 +9213,7 @@
                     <div class="ref-gallery-visual ref-gallery-theme-2"><img alt="HR Management App project cover image"
                             class="ref-gallery-full-image" loading="lazy"
                             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">10 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">10 / 14</span><a class="ref-gallery-view" href="project-10.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 10 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
@@ -9213,7 +9226,7 @@
                     <div class="ref-gallery-visual ref-gallery-theme-3"><img alt="Pet App project cover image"
                             class="ref-gallery-full-image" loading="lazy"
                             src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">11 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">11 / 14</span><a class="ref-gallery-view" href="project-11.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 11 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
@@ -9226,7 +9239,7 @@
                     <div class="ref-gallery-visual ref-gallery-theme-4"><img alt="Fitness App project cover image"
                             class="ref-gallery-full-image" loading="lazy"
                             src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">12 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">12 / 14</span><a class="ref-gallery-view" href="project-12.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 12 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
@@ -9239,7 +9252,7 @@
                     <div class="ref-gallery-visual ref-gallery-theme-5"><img
                             alt="Educational Website project cover image" class="ref-gallery-full-image" loading="lazy"
                             src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">13 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">13 / 14</span><a class="ref-gallery-view" href="project-13.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 13 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
@@ -9252,7 +9265,7 @@
                     <div class="ref-gallery-visual ref-gallery-theme-6"><img alt="Streaming App project cover image"
                             class="ref-gallery-full-image" loading="lazy"
                             src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" /><span
-                            class="ref-gallery-no">14 / 14</span><span class="ref-gallery-view">EXPLORE ↗</span></div>
+                            class="ref-gallery-no">14 / 14</span><a class="ref-gallery-view" href="project-14.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open project 14 PDF">EXPLORE ↗</a></div>
                     <div class="ref-gallery-info">
                         <div aria-hidden="true" class="ref-gallery-dots">
                             <span></span><span></span><span></span><span></span><span></span></div>
